@@ -3,9 +3,14 @@
     --border-radius: 6px;
     --black-color: #333;
     --caption-color: #3B5998;
+    --grey-color: #888
     color: var(--black-color);
     font-family: Verdana, sans-serif;
     font-size: 16px;
+
+    --login-label-width: 9rem;
+    --login-column-gap: 1rem;
+    --login-value-offset: calc(var(--login-label-width) + var(--login-column-gap));
 }
 
 html {
@@ -71,8 +76,7 @@ header nav ul li a {
 header nav .search {
     position: absolute;
     top: 77px;
-    right: 0;
-
+    right: 10px;
 }
 
 
@@ -182,7 +186,7 @@ article .title,
 
 article .information,
 .attachment {
-    color: #888;
+    color: var(--grey-color);
     font-size: 0.85rem;
 }
 
@@ -260,11 +264,11 @@ article .footer img {
 .login-form-box .name {
     float: left;
     text-align: right;
-    width: 9rem;
+    width: var(--login-label-width);
 }
 
 .login-form-box .value {
-    margin-left: 10rem;
+    margin-left: var(--login-value-offset);
 }
 
 .login-form-box .value input {
@@ -274,13 +278,13 @@ article .footer img {
 .login-form-box .error {
     color: red;
     font-size: 0.7rem;
-    margin-left: 10rem;
+    margin-left: var(--login-value-offset);
 }
 
 .checkbox-field,
 .button-field,
 .links {
-    margin-left: 10rem;
+    margin-left: var(--login-value-offset);
     margin-bottom: 1rem;
 }
 
